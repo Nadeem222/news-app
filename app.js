@@ -3,6 +3,7 @@ const baseUrl = 'https://newsapi.org/v2/everything';
 const inputValue = document.getElementById('input');
 const pageList = document.querySelectorAll("li");
 
+// Eventlistener to get value from li
 pageList.forEach((li) =>{
     li.addEventListener('click' , () =>{
         if (li.innerText === "Home"){
@@ -15,7 +16,7 @@ pageList.forEach((li) =>{
 })
 
 
-
+// Eventlistener to get input value 
 inputValue.addEventListener('keypress' , (e) =>{
     if(e.key === "Enter"){
         renderNews(inputValue.value)
